@@ -1,0 +1,29 @@
+﻿@page
+@model AddProductsModel
+@{}
+
+<section id="about">
+<form action="" method="post">
+        <label for="pname" asp-for="@Model.product.ProductName">ProductName:</label><br />
+        <input type="text" asp-for="@Model.product.ProductName" /> <br />
+
+        <span asp-validation-for="@Model.product.ProductName" class="text-danger"></span>
+
+        <label for="pdescription" asp-for="@Model.product.ProductDescription">Description:</label><br />
+        <input type="text" asp-for="@Model.product.ProductDescription" /> <br />
+
+        <span asp-validation-for="@Model.product.ProductDescription" class="text-danger"></span>
+
+        <label for="price" asp-for="@Model.product.ProductPrice">Price:</label><br />
+        <input type="text" asp-for="@Model.product.ProductPrice" /> <br />
+
+        <span asp-validation-for="@Model.product.ProductPrice" class="text-danger"></span>
+
+    <label for="pimage" asp-for="@Model.product.ProductImage">Image Name:</label><br />
+    <input type="text" asp-for="@Model.product.ProductImage" /> <br />
+
+    <span asp-validation-for="@Model.product.ProductImage" class="text-danger"></span>
+    <br/>
+    <input type="submit" value="submit" />
+</form>
+</section>

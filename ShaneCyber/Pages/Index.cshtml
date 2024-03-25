@@ -1,0 +1,140 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "";
+}
+
+<!-- Title -->
+
+    <div class="col-11">
+        <h1 id="title-banner">PROTECTION </h1>
+        <p id="title-banner2"> at the tips of your <span class="fontchange">fingers</span></p>
+    </div>
+    </div>
+</section>
+<section id="reviews">
+
+    <div class="row">
+
+        <div class="review-box col-lg-3">
+            <i class="icon fas fa-download fa-4x"></i>
+            <h3 class="review-title">Affordable</h3>
+            <p>Pay less for more.</p>
+
+        </div>
+
+        <div class="review-box col-lg-3">
+            <i class="icon fas fa-ghost fa-4x"></i>
+            <h3 class="review-title">Trustworthy</h3>
+            <p>Professionals swear by our products.</p>
+        </div>
+
+        <div class="review-box col-lg-3">
+            <i class="icon fas fa-tv fa-4x"></i>
+            <h3 class="review-title">Easy to Use</h3>
+            <p>Our products focus on the best user experience possible.</p>
+
+        </div>
+
+        <div class="review-box col-lg-3">
+            <i class="icon far fa-laugh-squint fa-4x"></i>
+            <h3 class="review-title">Customer Satisfaction</h3>
+            <p>We conduct monthly reviews with our customers as our #1 prioity.</p>
+        </div>
+
+    </div>
+</section>
+<!-- About -->
+<section id="about">
+    <h3 class="abth3">Curious about ShaneCyber?</h3>
+    <p class="abtp">
+        Did you know that there are more viruses in your computer than you could imagine? ShaneCyber is a hacker's nightmare as
+        our anti-virus options provide fortification and prevention.
+    </p>
+    <p class="abtp">
+        No matter how many variations of malware you encounter, you can be assured that ShaneCyber can handle it. 
+        Register with us and let us do the rest!
+    </p>
+    <p class="abtp">
+        <button class="abtdownload btn btn-light btn-lg" type="button">
+            <a asp-page="/Products/ViewProducts" class="expBtn">Check out our Products</a>
+        </button>
+    </p>
+
+</section>
+
+<!-- Products -->
+<section id="products">
+    <h3 class="carname">Products</h3>
+    <p class="abtp">Catch a glimpse!</p>
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-pause="hover">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+
+                <div class="row">
+                    <div class="char-box col-sm-3 col-md-6 col-lg-4">
+                        <img src="images/norton.jpg" class="carimg" alt="norton">
+                        <p class="fontchange">Norton360</p>
+                    </div>
+                    <div class="char-box col-sm-3 col-md-6 col-lg-4">
+                        <img src="images/totalav.png" class="carimg" alt="totalAV">
+                        <p class="fontchange">Total AV</p>
+                    </div>
+                    <div class="char-box col-sm-3 col-md-6 col-lg-4">
+                        <img src="images/mcafee.jpg" class="carimg" alt="mcafee">
+                        <p class="fontchange">McAfee </p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="char-box col-sm-3 col-md-6 col-lg-4">
+                        <img src="images//panda.png" class="carimg" alt="panda">
+                        <p class="fontchange">Panda</p>
+                       </div>
+
+                    <div class="char-box col-sm-3 col-md-6 col-lg-4">
+                        <img src="images/bitdefender.png" class="carimg" alt="bitdef">
+                        <p class="fontchange">BitDefender</p>
+                    </div>
+
+                    <div class="char-box col-sm-3 col-md-6 col-lg-4">
+                        <img src="images/avira.png" class="carimg" alt="avira">
+                        <p class="fontchange">Avira</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="char-box col-sm-3 col-md-6 col-lg-4">
+                        <img src="images/surfshark.png" class="carimg" alt="surfshark">
+                        <p class="fontchange">SurfShark AntiVirus</p>
+                    </div>
+
+                    <div class="char-box col-sm-3 col-md-6 col-lg-4">
+                        <img src="images/eset.png" class="carimg" alt="eset">
+                        <p class="fontchange">eset</p>
+                    </div>
+
+                    <div class="char-box col-sm-3 col-md-6 col-lg-4">
+                        <img src="images/trendmicro.png" class="carimg" alt="trendmicro">
+                        <p class="fontchange">Trend Micro</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+</section>

@@ -1,0 +1,60 @@
+﻿@page
+@model ShaneCyber.Pages.Orders.CheckoutModel
+@{
+}
+@{
+    ViewData["Title"] = "";
+}
+
+<h1>Checkout</h1>
+<form method="post">
+   
+    <h2>Order Summary</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">S/n</th>
+                <th scope="col">Product</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in CartModel.Orders)
+            {
+                <tr>
+                    <th scope="row">@item.OrderId</th>
+                    <td>@item.ProductName</td>
+                    <td>@item.ProductPrice</td>
+                    <td>
+                        @item.OrderQuantity
+                    </td>
+                    <td>@(item.ProductPrice * item.OrderQuantity)</td>
+                    
+                </tr>
+                <p>Total is: @item.OrderTotal</p>
+            }
+        </tbody>
+    </table>
+
+
+
+        <section id="review">
+    <h2>Shipping Information</h2>
+        <form action="" method="post">
+            <label for="pname" asp-for="@Model.order.CustomerFullName">Full Name:</label><br />
+            <input type="text" asp-for="@Model.order.CustomerFullName" /> <br />
+
+            <span asp-validation-for="@Model.order.CustomerFullName" class="text-danger"></span>
+
+            <label for="pdescription" asp-for="@Model.order.CustomerAddress">Address:</label><br />
+            <input type="text" asp-for="@Model.order.CustomerAddress" /> <br />
+
+            <br />
+            <input type="submit" value="Place Order" />
+        </form>
+    
+    <button type="submit" class="btn btn-primary">Place Order</button>
+        </section>
+</form>

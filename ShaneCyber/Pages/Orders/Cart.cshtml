@@ -1,0 +1,44 @@
+﻿@page
+@model ShaneCyber.Pages.Orders.CartModel
+@{
+}
+
+<section id="reviews">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">S/n</th>
+                <th scope="col">Product</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in CartModel.Orders)
+            {
+                <tr>
+                    <th scope="row">@item.OrderId</th>
+                    <td>@item.ProductName</td>
+                    <td>@item.ProductPrice</td>
+                    <td>
+                        <input type="number" value="@item.OrderQuantity" min="1" style="width: 80px;" />
+                    </td>
+                    <td>@(item.ProductPrice * item.OrderQuantity)</td>
+                    <td>
+                        <form method="post">
+                            <input type="hidden" name="id" value="@item.ProductId" />
+                            <button type="submit" class="Remove" onclick="return confirm('Remove item?');" asp-page-handler="Remove" asp-route-id="@item.ProductId">Remove</button>
+                        </form>
+                    </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+        <div>
+        <p id="title-banner2">Continue <a asp-page="/Products/ViewProducts">shopping</a> or <a asp-page="/Orders/Checkout">Checkout</a></p>
+        </div>
+                
+    
+</section>

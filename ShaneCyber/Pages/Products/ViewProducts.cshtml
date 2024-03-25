@@ -1,0 +1,35 @@
+﻿@page
+@model ProductModel
+@{
+
+}
+<section id="products">
+    <h3 class="carname">Products</h3>
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-pause="hover">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                @foreach (var product in Model.ProductList)
+        {
+                <div>
+                    <div class="prod-box">
+                            <img src="/images/@product.ProductImage" class="carimg">
+                            <p class="fontchange">@product.ProductName</p>
+                            <span class="full-text">@product.ProductDescription</span>
+                            <p class="fontchange">@product.ProductPrice</p>
+                            <button type="button" class="btn btn-outline-primary">
+                                <a href="/Orders/Cart?id=@product.ProductId&name=@product.ProductName&price=@product.ProductPrice">Add to Cart</a>
+                            </button>
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <button type="button" class="btn btn-outline-danger"><a href="/Products/DeleteProduct?id=@product.ProductId">Delete</a></button>
+                                <button type="button" class="btn btn-outline-secondary"><a href="/Products/UpdateProduct?id=@product.ProductId">Update</a></button>
+                            }
+                    </div>
+                </div>
+        }
+            </div>
+        </div>
+    </div>
+
+</section>
